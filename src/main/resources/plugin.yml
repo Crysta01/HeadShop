@@ -1,0 +1,18 @@
+name: ${project.name}
+main: me.Fupery.HeadShop.HeadShop
+version: ${project.version}
+description: ${project.description}
+depends: [Vault]
+author: Fupery
+
+commands:
+  headshop:
+      usage:  |
+        <command> add <playername> : Add a head
+        <command> remove <playername> : Remove a head
+        <command> get <playername> : Checks if head has been added
+        <command> categories : Lists categories
+permissions:
+  headshop.admin:
+    description: Allows access to commands
+    default: op

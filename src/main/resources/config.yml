@@ -1,0 +1,292 @@
+#config
+
+#Default cost for heads
+defaultCost: 250
+
+#Names available for in the shop
+categories:
+  Mobs:
+    Pig:
+      owner: MHF_Pig
+    Blaze:
+      owner: MHF_Blaze
+    Cave_spider:
+      owner: MHF_CaveSpider
+    Chicken:
+      owner: MHF_Chicken
+    Cow:
+      owner: MHF_Cow
+    Creeper:
+      owner: MHF_Creeper
+    Enderman:
+      owner: MHF_Enderman
+    Ghast:
+      owner: MHF_Ghast
+    Golem:
+      owner: MHF_Golem
+    Herobrine:
+      owner: MHF_Herobrine
+    LavaSlime:
+      owner: MHF_LavaSlime
+    Mooshroom:
+      owner: MHF_MushroomCow
+    Ocelot:
+      owner: MHF_Ocelot
+    Zombie_Pigman:
+      owner: MHF_PigZombie
+    Sheep:
+      owner: MHF_Sheep
+    Slime:
+      owner: MHF_Slime
+    Spider:
+      owner: MHF_Spider
+    Squid:
+      owner: MHF_Squid
+    Steve:
+      owner: MHF_Steve
+    Villager:
+      owner: MHF_Villager
+  
+  MiniBlocks:
+    Cactus:
+      owner: MHF_Cactus
+    Cake:
+      owner: MHF_Cake
+    Chest:
+      owner: MHF_Chest
+    CoconutB:
+      owner: MHF_CoconutB
+    CoconutG:
+      owner: MHF_CoconutG
+    Melon:
+      owner: MHF_Melon
+    Log:
+      owner: MHF_OakLog
+    Gift1:
+      owner: MHF_Present1
+    Gift2:
+      owner: MHF_Present2
+    Pumpkin:
+      owner: MHF_Pumpkin
+    TNT1:
+      owner: MHF_TNT
+    TNT2:
+      owner: MHF_TNT2
+  
+  Bonus:
+    Arrow_Up:
+      owner: MHF_ArrowUp
+    Arrow_Down:
+      owner: MHF_ArrowDown
+    Arrow_Left:
+      owner: MHF_ArrowLeft
+    Arrow_Right:
+      owner: MHF_ArrowRight
+    Exclamation:
+      owner: MHF_Exclamation
+    Question:
+      owner: MHF_Question
+
+  Food:
+    Roast:
+      owner: Ernie77
+    Popcorn:
+      owner: ZachWarnerHD
+    Nutella:
+      owner: Chipsandip
+    Can:
+      owner: FlabbenBaggen
+    Cookie:
+      owner: QuadratCookie
+    Chocolate:
+      owner: Chazwell777
+    IceCream_Sandwitch:
+      owner: DutchGuard
+    Oreo:
+      owner: AmericanOreo
+    Tomato:
+      owner: KylexDavis
+    Burger1:
+      owner: food
+    Burger2:
+      owner: Sloggy_Whopper
+    Melon:
+      owner: PatrickAVG
+    Beer:
+      owner: Thanauser
+    Milk:
+      owner: Spinken5840
+    Strawberry:
+      owner: RuthlessTomato
+    Bread:
+      owner: _Grime
+    Waffles:
+     owner: TheModernWaffle
+    Donut:
+      owner: DoughnutDogg
+    Pepsi:
+      owner: Sh4d0wB0b
+    Pancakes:
+      owner: FluffyPancakes
+    Salad:
+      owner: NnOoMmIiSs123
+    Cookie:
+      owner: AtomicCookies
+    Kiwi:
+      owner: KiwiClipClop
+
+  Tech:
+    TV1:
+      owner: Metroidling
+    TV2:
+      owner: GameNilo
+    TV3:
+      owner: Is200PingGood
+    TV4:
+      owner: nonesuchplace
+    Terminal1:
+      owner: PC
+    Terminal2:
+      owner: Mrben130Dev
+    Terminal3:
+      owner: Hack
+    Computer1:
+      owner: Laserpanda
+    Computer2:
+      owner: Cheapshot
+    Computer3:
+      owner: Addelburgh
+    Computer4:
+      owner: Alistor
+    Computer5:
+      owner: Ferocious_Ben
+    Computer6:
+      owner: Axle39
+    Printer:
+      owner: USB
+
+  Appliances:
+    Radio:
+      owner: uioz
+    OldCamera:
+      owner: 3i5g00d
+    Toaster:
+      owner: zEL3M3nTz
+    Clock1:
+      owner: Olaf_C
+    Clock2:
+      owner: bebe2c
+    Clock3:
+      owner: Johnsquawk
+
+  Decorations:
+    Gift1:
+      owner: Hannah4848
+    Gift2:
+      owner: CruXXx
+    Gift3:
+      owner: SeerPotion
+    Books1:
+      owner: Erixia
+    Books2:
+      owner: CS001
+    Books3:
+      owner: raxo55
+    FishTank:
+      owner: bowls
+    WaterTank:
+      owner: Asiankid2004
+    LavaTank:
+      owner: catus123
+    Plant:
+      owner: ThePearlyBum
+    Chimney:
+      owner: The_Wither_Boss
+    Birdhouse:
+      owner: ItsyBitsyJewelry
+    Candle:
+      owner: pearl_xD
+    Globe:
+      owner: Mapparere
+    Beehive:
+      owner: Freshmuffin
+    Dice:
+      owner: AzBandit2000
+    Backpack:
+      owner: MHF_BackPack
+    Rubix_Cube:
+      owner: Richard1230
+
+  Helmets:
+    HoodedSkull:
+      owner: Clear
+    EyeBall:
+      owner: Eye
+    EnderEye:
+      owner: Edna_I
+    Monster1:
+      owner: Cryptkeeper
+    Monster2:
+      owner: TeaZ
+    Skull1:
+      owner: BadLuck
+    Skull2:
+      owner: vire
+    Helmet1:
+      owner: Ramses_II
+    Helmet2:
+      owner: Jarofdirt
+    Helmet3:
+      owner: Gannicus
+    ScubaHelmet: 
+      owner: trainrider
+
+  Pokemon:
+    Pokeball:
+      owner: pokecraft3000
+    Ash:
+      owner: Pokemon
+    Pikachu:
+      owner: Pikachubutler
+    Charmander:
+      owner: Charmander
+    Bulbasaur:
+      owner: Bulbasaur
+    Mudkip_MC:
+      owner: Mudkip_MC
+    Rayquaza:
+      owner: Rayquaza
+    Slowpoke:
+      owner: mmmaik
+    Magikarp:
+      owner: hojp
+
+  Mario:
+    Donkey_Kong:
+      owner: kongHD
+    Mario:
+      owner: Mario
+    Luigi:
+      owner: Luigi
+    Yoshi:
+      owner: Yoshi
+    Toad:
+      owner: Toad
+    Bowser:
+      owner: Bowser
+
+  StarWars:
+    Boba_Fett:
+      owner: BobaFett
+    Darth_Vader:
+      owner: Darth_Vader_One
+    Stormtrooper1:
+      owner: Stormtrooper
+    Stormtrooper2:
+      owner: zwatkins15
+
+  Games:
+    Sonic:
+     owner: SonicHogSpeed
+
+
