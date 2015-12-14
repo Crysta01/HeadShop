@@ -72,10 +72,19 @@ public class HeadMenu extends ListMenu {
         @Override
         public void onClick(JavaPlugin plugin, final Player player) {
 
-            if (HeadShop.getEconomy().getBalance(player) >= head.getCost()) {
-                HeadShop.getEconomy().withdrawPlayer(player, head.getCost());
-                player.sendMessage(String.format(ChatColor.GREEN + "Purchased %s for $%s",
-                        head.getName(), head.getCost()));
+            if (HeadShop.getEconomy().getBalance(player) < head.getCost()
+                    && !player.hasPermission("headshop.admin")) {
+                player.sendMessage(ChatColor.RED + "Sorry, you don't have enough money to purchase this Head!");
+                player.getWorld().playSound(player.getLocation(), Sound.CLICK, 1, 1);
+
+            } else {
+
+                if (!player.hasPermission("headshop.admin")) {
+                    HeadShop.getEconomy().withdrawPlayer(player, head.getCost());
+                    player.sendMessage(String.format(ChatColor.GREEN + "Purchased %s for $%s",
+                            head.getName(), head.getCost()));
+                    Logging.log(plugin, player, head);
+                }
 
                 Bukkit.getScheduler().runTask(plugin, new Runnable() {
                     @Override
@@ -94,13 +103,7 @@ public class HeadMenu extends ListMenu {
                         }
                     }
                 });
-                Logging.log(plugin, player, head);
-
                 player.getWorld().playSound(player.getLocation(), Sound.ORB_PICKUP, 1, 1);
-
-            } else {
-                player.sendMessage(ChatColor.RED + "Sorry, you don't have enough money to purchase this Head!");
-                player.getWorld().playSound(player.getLocation(), Sound.CLICK, 1, 1);
             }
         }
     }

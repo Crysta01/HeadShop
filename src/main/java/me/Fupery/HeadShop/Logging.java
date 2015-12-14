@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class Logging {
 
-    private static final DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy|kk:mm");
+    private static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static final String log = "transactions.log";
 
     public static void log(final JavaPlugin plugin, final Player player, final PlayerHead head) {
@@ -34,7 +34,7 @@ public class Logging {
                 try {
                     fileWriter = new FileWriter(file, true);
                     logger = new PrintWriter(fileWriter);
-                    logger.println(String.format("[%s] %s BOUGHT \'%s\' FOR $%s",
+                    logger.println(String.format("[%s] %s BOUGHT %s FOR $%s",
                             dateFormat.format(new Date()), player.getName(), head.getName(), head.getCost()));
                     logger.flush();
                     logger.close();
