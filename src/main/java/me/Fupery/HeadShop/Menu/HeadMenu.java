@@ -1,5 +1,6 @@
 package me.Fupery.HeadShop.Menu;
 
+import me.Fupery.HeadShop.Logging;
 import me.Fupery.HeadShop.Menu.InventoryMenu.ListMenu;
 import me.Fupery.HeadShop.Menu.InventoryMenu.MenuButton;
 import me.Fupery.HeadShop.PlayerHead;
@@ -93,6 +94,7 @@ public class HeadMenu extends ListMenu {
                         }
                     }
                 });
+                Logging.log(plugin, player, head);
 
                 player.getWorld().playSound(player.getLocation(), Sound.ORB_PICKUP, 1, 1);
 
