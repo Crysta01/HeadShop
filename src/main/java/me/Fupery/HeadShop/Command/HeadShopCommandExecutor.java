@@ -48,7 +48,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
                 }
                 String displayName = owner.getName();
                 String category = "uncategorized";
-                int cost = HeadShop.getDefaultCost();
+                Integer cost = null;
 
                 if (args.length > 2) {
 
@@ -65,7 +65,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
                             try {
                                 cost = Integer.parseInt(args[i].replace(costKey, ""));
                             } catch (NumberFormatException e) {
-                                cost = HeadShop.getDefaultCost();
+                                cost = null;
                             }
                         }
                     }
