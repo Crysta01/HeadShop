@@ -73,7 +73,8 @@ public class HeadShopCommandExecutor implements CommandExecutor {
                 PlayerHead head = new PlayerHead(owner.getName(), displayName, cost);
                 plugin.addHead(head, category);
                 sender.sendMessage(HeadShop.prefix + ChatColor.DARK_GREEN
-                        + String.format("Successfully added %s to category %s for $%s.", displayName, category, cost));
+                        + String.format("Successfully added %s to category %s for $%s.",
+                        displayName, category, head.getCost()));
                 return true;
             }
         });
