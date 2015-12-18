@@ -9,7 +9,7 @@ public class PlayerHead {
     public PlayerHead(String owner, String name, Integer cost) {
         this.owner = owner;
         this.displayName = name;
-        this.cost = (cost == null) ? HeadShop.getDefaultCost() : cost;
+        this.cost = cost;
     }
 
     public String getOwner() {
@@ -20,7 +20,11 @@ public class PlayerHead {
         return displayName;
     }
 
+    public boolean hasCost() {
+        return cost != null;
+    }
+
     public Integer getCost() {
-        return cost;
+        return (cost != null) ? cost : HeadShop.getDefaultCost();
     }
 }

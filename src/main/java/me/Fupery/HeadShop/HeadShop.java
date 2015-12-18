@@ -86,17 +86,17 @@ public class HeadShop extends JavaPlugin {
             return null;
         }
         Set<String> keys = categorySection.getKeys(false);
-        PlayerHead[] skulls = new PlayerHead[keys.size()];
+        PlayerHead[] heads = new PlayerHead[keys.size()];
 
         int i = 0;
         for (String skullName : categorySection.getKeys(false)) {
             ConfigurationSection skullData = categorySection.getConfigurationSection(skullName);
             Integer cost = skullData.contains(costKey) ? skullData.getInt(costKey) : null;
-            skulls[i] = new PlayerHead(skullData.getString(ownerKey), skullName, cost);
+            heads[i] = new PlayerHead(skullData.getString(ownerKey), skullName, cost);
             i ++;
         }
 
-        return skulls;
+        return heads;
     }
 
     public void addHead(final PlayerHead head, String category) {
@@ -107,7 +107,7 @@ public class HeadShop extends JavaPlugin {
         ConfigurationSection skullData = categorySection.createSection(head.getName());
         skullData.set(ownerKey, head.getOwner());
 
-        if (head.getCost() != null) {
+        if (head.hasCost()) {
             skullData.set(costKey, head.getCost());
         }
         updateConfig();
