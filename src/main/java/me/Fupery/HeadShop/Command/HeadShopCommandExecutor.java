@@ -83,7 +83,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
             public boolean runCommand(CommandSender sender, String[] args, ReturnMessage msg) {
 
                 if (!plugin.removeHead(args[1])) {
-                    msg.message = errorMessage("Player head '%s' could not be found!");
+                    msg.message = errorMessage(String.format("Player head '%s' could not be found!", args[1]));
                     return false;
                 }
                 sender.sendMessage(HeadShop.prefix + ChatColor.DARK_GREEN
