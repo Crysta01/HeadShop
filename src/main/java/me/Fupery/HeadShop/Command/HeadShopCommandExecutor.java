@@ -37,7 +37,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
 
         commands.put("add", new HeadShopCommand(plugin, "headshop.admin", String.format(
                 "/headshop add <headOwner> [%s<displayName>] [%s<categoryName>] [%s<amount>])",
-                nameKey, categoryKey, costKey), false) {
+                nameKey, categoryKey, costKey), true) {
             @Override
             public boolean runCommand(CommandSender sender, String[] args, ReturnMessage msg) {
                 OfflinePlayer owner = Bukkit.getOfflinePlayer(args[1]);
@@ -79,7 +79,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
             }
         });
 
-        commands.put("remove", new HeadShopCommand(plugin, "headshop.admin", "/headshop remove <headOwner>", false) {
+        commands.put("remove", new HeadShopCommand(plugin, "headshop.admin", "/headshop remove <headOwner>", true) {
             @Override
             public boolean runCommand(CommandSender sender, String[] args, ReturnMessage msg) {
 
@@ -93,7 +93,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
             }
         });
 
-        commands.put("categories", new HeadShopCommand(plugin, "headshop.admin", "/headshop categories", false) {
+        commands.put("categories", new HeadShopCommand(plugin, "headshop.admin", "/headshop categories", true) {
             @Override
             public boolean runCommand(CommandSender sender, String[] args, ReturnMessage msg) {
                 String categories = HeadShop.prefix + ChatColor.LIGHT_PURPLE + "Current Categories: " + ChatColor.DARK_GREEN;
@@ -106,7 +106,7 @@ public class HeadShopCommandExecutor implements CommandExecutor {
             }
         });
 
-        commands.put("help", new HeadShopCommand(plugin, null, "/headshop help", false) {
+        commands.put("help", new HeadShopCommand(plugin, null, "/headshop help", true) {
             @Override
             public boolean runCommand(CommandSender sender, String[] args, ReturnMessage msg) {
 
