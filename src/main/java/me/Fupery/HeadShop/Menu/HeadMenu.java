@@ -75,7 +75,7 @@ public class HeadMenu extends ListMenu {
             if (HeadShop.getEconomy().getBalance(player) < head.getCost()
                     && !player.hasPermission("headshop.admin")) {
                 player.sendMessage(ChatColor.RED + "Sorry, you don't have enough money to purchase this Head!");
-                player.playSound(player.getLocation(), Sound.CLICK, 1, 1);
+                player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
 
             } else {
 
@@ -103,7 +103,7 @@ public class HeadMenu extends ListMenu {
                         }
                     }
                 });
-                player.playSound(player.getLocation(), Sound.ORB_PICKUP, 1, 1);
+                player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_TOUCH, 1, 1);
             }
         }
     }

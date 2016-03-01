@@ -1,12 +1,10 @@
 package me.Fupery.HeadShop.Command;
 
 import me.Fupery.HeadShop.HeadShop;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import static me.Fupery.HeadShop.Command.ReturnMessage.errorMessage;
 
