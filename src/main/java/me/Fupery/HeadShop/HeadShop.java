@@ -24,6 +24,8 @@ public class HeadShop extends JavaPlugin {
     private static final String costKey = "cost";
     public static final String prefix = "§5[HeadShop] ";
 
+    private MenuListener listener;
+
     @Override
     public void onEnable() {
         super.onEnable();
@@ -36,8 +38,8 @@ public class HeadShop extends JavaPlugin {
         FileConfiguration config = getConfig();
         defaultCost = config.getInt("defaultCost");
         categories = config.getConfigurationSection("categories");
-
-        getServer().getPluginManager().registerEvents(new MenuListener(this), this);
+        listener = new MenuListener(this);
+        getServer().getPluginManager().registerEvents(listener, this);
         getCommand("headshop").setExecutor(new HeadShopCommandExecutor(this));
 
         if (!setupEconomy()) {
@@ -150,5 +152,6 @@ public class HeadShop extends JavaPlugin {
     @Override
     public void onDisable() {
         super.onDisable();
+        listener.closeMenus();
     }
 }

@@ -5,6 +5,7 @@ import me.Fupery.HeadShop.Menu.InventoryMenu.ListMenu;
 import me.Fupery.HeadShop.Menu.InventoryMenu.MenuButton;
 import me.Fupery.HeadShop.PlayerHead;
 import me.Fupery.HeadShop.HeadShop;
+import me.Fupery.HeadShop.Utils.SoundCompat;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -75,7 +76,7 @@ public class HeadMenu extends ListMenu {
             if (HeadShop.getEconomy().getBalance(player) < head.getCost()
                     && !player.hasPermission("headshop.admin")) {
                 player.sendMessage(ChatColor.RED + "Sorry, you don't have enough money to purchase this Head!");
-                player.playSound(player.getLocation(), Sound.CLICK, 1, 1);
+                SoundCompat.UI_BUTTON_CLICK.play(player);
 
             } else {
 
@@ -103,7 +104,7 @@ public class HeadMenu extends ListMenu {
                         }
                     }
                 });
-                player.playSound(player.getLocation(), Sound.ORB_PICKUP, 1, 1);
+                SoundCompat.ENTITY_EXPERIENCE_ORB_TOUCH.play(player);
             }
         }
     }

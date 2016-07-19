@@ -92,4 +92,10 @@ public class MenuListener implements Listener {
             InventoryMenu.openMenus.get(player).close(player);
         }
     }
+
+    public void closeMenus() {
+        for (Player player : InventoryMenu.openMenus.keySet()) {
+            InventoryMenu.openMenus.get(player).close(player);
+        }
+    }
 }
