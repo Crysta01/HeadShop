@@ -1,5 +1,6 @@
 package me.Fupery.HeadShop.Menu.InventoryMenu;
 
+import me.Fupery.HeadShop.Utils.SoundCompat;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -41,7 +42,7 @@ public abstract class MenuButton extends ItemStack {
 
         @Override
         public void onClick(JavaPlugin plugin, Player player) {
-            player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
+            SoundCompat.UI_BUTTON_CLICK.play(player);
             linkedMenu.open(plugin, player);
         }
 
@@ -76,7 +77,7 @@ public abstract class MenuButton extends ItemStack {
 
                     if (menu.parent != null) {
                         menu.parent.open(plugin, player);
-                        player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 3);
+                        SoundCompat.UI_BUTTON_CLICK.play(player, 1, 3);
                     }
                 }
             });

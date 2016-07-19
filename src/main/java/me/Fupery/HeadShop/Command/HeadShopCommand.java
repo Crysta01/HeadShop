@@ -36,8 +36,6 @@ public abstract class HeadShopCommand implements AbstractCommand {
         this.plugin = plugin;
     }
 
-
-
     void runPlayerCommand(final CommandSender sender, final String args[]) {
 
         Bukkit.getScheduler().runTaskAsynchronously(plugin, new Runnable() {

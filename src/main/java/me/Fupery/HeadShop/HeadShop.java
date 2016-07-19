@@ -27,6 +27,7 @@ public class HeadShop extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
+        Bukkit.getLogger().info("§7YEP------------.>");// TODO: 17/04/2016  
         menu = new CategoryMenu(this);
 
         if (!getDataFolder().exists()) {
